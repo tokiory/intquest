@@ -1,0 +1,17 @@
+.title {
+  font-weight: 800;
+  display: inline-block;
+  line-height: 1.5;
+
+  &_md {
+    font-size: 24px;
+  }
+
+  &_sm {
+    font-size: 20px;
+  }
+
+  &_lg {
+    font-size: 48px;
+  }
+}

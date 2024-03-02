@@ -1,0 +1,3 @@
+[submodule "shared/tags"]
+	path = shared/tags
+	url = git@github.com:interquesty-app/interquesty-tags.git

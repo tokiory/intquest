@@ -1,0 +1,22 @@
+:root {
+  // Background
+  --color-background-primary: #3b3b3b;
+  --color-background-secondary: #494949;
+  --color-background-tertiary: #545454;
+  --color-gradient-primary: linear-gradient(to right bottom, rgb(134 239 172), rgb(59 130 246), rgb(147 51 234));
+
+  // Foreground
+  --color-foreground-primary: #fefefe;
+  --color-foreground-secondary: #f3f3f3;
+  --color-foreground-tertiary: #eaeaea;
+  --color-foreground-gray: #969696;
+  --color-foreground-invisible: #565656;
+
+  // Borders
+  --color-border-primary: #525252;
+  --color-border-secondary: #6b6b6b;
+
+  // Accents
+  --color-accent-primary: #86efac;
+  --color-accent-secondary: #7eabf6;
+}

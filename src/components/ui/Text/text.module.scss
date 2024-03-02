@@ -1,0 +1,16 @@
+.text {
+  display: inline-block;
+  font-weight: 400;
+
+  &_sm {
+    font-size: 14px;
+  }
+
+  &_md {
+    font-size: 16px;
+  }
+
+  &_lg {
+    font-size: 24px;
+  }
+}

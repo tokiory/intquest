@@ -1,0 +1,20 @@
+.summary-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-background-primary);
+  border-top: 1px solid var(--color-border-primary);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__button {
+    display: flex;
+    gap: 12px;
+    &_proceed {
+      color: var(--color-accent-secondary);
+    }
+  }
+}

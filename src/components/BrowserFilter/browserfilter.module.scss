@@ -1,0 +1,38 @@
+.browser-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+
+  &__text {
+    color: var(--color-foreground-gray);
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+
+.tags {
+  display: flex;
+  gap: 12px;
+  height: 50px;
+  margin-top: 18px;
+
+  //&:has(&__item) {
+  //  height: initial;
+  //}
+
+  &__item {
+    height: fit-content;
+  }
+}

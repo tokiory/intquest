@@ -1,0 +1,14 @@
+.stub {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  &__emoji {
+    font-size: 72px;
+  }
+
+  &__title {}
+}

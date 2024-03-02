@@ -1,0 +1,10 @@
+.questionreference {
+  display: block;
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
+
+  &:hover {
+    color: var(--color-accent-secondary)
+  }
+}

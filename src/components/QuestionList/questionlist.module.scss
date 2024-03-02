@@ -1,0 +1,16 @@
+.questionlist {
+  &__item {
+    scroll-margin-top: 120px;
+    scroll-margin-bottom: 120px;
+
+    &_active {
+      border: 1px solid var(--color-accent-primary);
+      border-radius: 4px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+}
+

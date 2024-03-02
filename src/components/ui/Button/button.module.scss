@@ -1,0 +1,27 @@
+.button {
+  background-color: var(--color-background-secondary);
+  color: var(--color-foreground-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border-color: var(--color-border-secondary);
+  }
+
+  &_sm {
+    padding: 6px 8px;
+  }
+
+  &_md {
+    padding: 8px 12px;
+  }
+
+  &_lg {
+    padding: 12px 18px;
+  }
+}
