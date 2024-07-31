@@ -25,11 +25,6 @@ const sections: Section[] = [
     link: getSectionUrl('devops'),
     icon: 'fe:scale',
   },
-  {
-    name: 'Fullstack',
-    link: getSectionUrl('fullstack'),
-    icon: 'fe:vector'
-  }
 ];
 
 export default sections;

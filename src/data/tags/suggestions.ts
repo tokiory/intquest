@@ -15,5 +15,7 @@ export default {
     "vuex",
     "pinia"
 ].map(key => tags[key as keyof typeof tags]),
-  backend: []
+  backend: [],
+  qa: [],
+  devops: [],
 }
