@@ -32,7 +32,7 @@ export const BrowserPage = () => {
         const collection = section.collection
           .filter(question => {
             const questionTags = question.tags?.map(item => item.name);
-            return question.name.includes(filters.search)
+            return question.name.toLowerCase().includes(filters.search.toLowerCase())
               && filters.tags.every(tag => questionTags?.includes(tag.name));
           });
 
