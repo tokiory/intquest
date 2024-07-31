@@ -57,10 +57,12 @@ export const BrowserPage = () => {
     </div>
   ));
 
+  const stub = isFetchingSections ? <></> : <QuestionListStub />
+
   return (
     <div className={styles.browserpage}>
       <BrowserFilter />
-      {questionList?.some(element => element) ? questionList : (isFetchingSections ? <></> : <QuestionListStub />)}
+      {questionList?.some(element => element) ? questionList : stub}
       {summary.questions.length > 0 && <SummaryFooter />}
     </div>
   );
