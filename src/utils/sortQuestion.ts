@@ -27,7 +27,5 @@ export const sortQuestion = (a: Question, b : Question): number => {
     }
   }
 
-  console.log({weight});
-
   return weight;
 };

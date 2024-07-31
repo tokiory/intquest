@@ -1,11 +1,24 @@
 import {SectionList} from "@/components/SectionList/SectionList.tsx";
 import {Text} from "@/components/ui";
+import backend from "@/data/questions/backend";
+import devops from "@/data/questions/devops";
+import frontend from "@/data/questions/frontend";
+import qa from "@/data/questions/qa";
 import {Icon} from "@iconify-icon/react";
 import {clsx} from "clsx";
+import { useMemo } from "react";
 import styles from './homepage.module.scss';
 import sections from "@/data/sections.ts";
 
 export const HomePage = () => {
+  const totalQuestionAmount = useMemo(() => {
+    const chapters = [backend, devops, frontend, qa];
+    return chapters
+      .flatMap(chapter => chapter.map(section => section.collection))
+      .reduce((accumulator, collection) => accumulator + collection.length, 0)
+  }, []);
+    // .reduce((accumulator, collection) => accumulator + collection.collection.length, 0)
+
   return (
     <div className={styles.homepage}>
       <div className={styles.homepage__title}>
@@ -16,6 +29,12 @@ export const HomePage = () => {
         <span className={clsx(styles.homepage__text, styles.homepage__text_invisible)}>ion</span>
       </div>
       <SectionList className={styles.homepage__sections} list={sections} />
+
+      <Text size="sm" className={styles.homepage__amount}>
+        <span title="А хотелось бы 1000...">
+          Общее количество вопросов: {totalQuestionAmount}
+        </span>
+      </Text>
 
       <div className={styles.homepage__description}>
         Intquest предоставляет собеседующему огромный выбор вопросов для интервью. После того как собеседование будет окончено -

@@ -1,5 +1,7 @@
 import qaCollection from "@/data/questions/qa/qaCollection.ts";
 
-export default [
+const collections = [
   qaCollection
-];
+]
+
+export default collections

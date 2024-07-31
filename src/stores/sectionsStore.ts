@@ -31,7 +31,6 @@ const sectionsStore = {
           ...section,
           collection: section.collection.sort(sortQuestion),
         }));
-        console.log({sortedSections});
         this.state.set(sortedSections);
       });
   }

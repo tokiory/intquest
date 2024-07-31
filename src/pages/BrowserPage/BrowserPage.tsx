@@ -45,15 +45,16 @@ export const BrowserPage = () => {
 
   const questionList = filteredSections.get().map((section) => (
     section.collection.length > 0 && <div className={styles.questions} key={section.title}>
-      <Title className={styles.questions__title}>
-        {section.icon && <Icon icon={section?.icon} />}
-        {section.title}
-      </Title>
+      <div className={styles.questions__header}>
+        <Title className={styles.questions__title}>
+          {section.icon && <Icon icon={section?.icon} />}
+          {section.title}
+        </Title>
+        <Title className={styles.questions__amount} size={"sm"}>{section.collection.length}</Title>
+      </div>
       <QuestionList className={styles.browserpage__collection} list={section.collection} />
     </div>
   ));
-
-  console.log({questionList});
 
   return (
     <div className={styles.browserpage}>

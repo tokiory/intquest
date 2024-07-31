@@ -6,9 +6,15 @@
   align-items: center;
 
   &__title {
+    text-align: center;
     font-size: 92px;
     font-weight: 800;
     margin-top: auto;
+  }
+
+  &__amount, &__author, &__description {
+    text-align: center;
+    color: var(--color-foreground-gray);
   }
 
   &__author {
@@ -16,7 +22,6 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 16px;
-    color: var(--color-foreground-gray);
     font-weight: 500;
   }
 
@@ -34,7 +39,6 @@
     margin-top: auto;
     margin-bottom: 24px;
     font-weight: 500;
-    color: var(--color-foreground-gray);
     max-width: 700px;
     line-height: 1.4;
     text-align: center;

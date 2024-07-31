@@ -21,10 +21,19 @@
 
   width: 100%;
 
+  &__header {
+    display: flex;
+    gap: 2px;
+  }
+
   &__title {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  &__amount {
+    color: var(--color-foreground-gray)
   }
 }
 
