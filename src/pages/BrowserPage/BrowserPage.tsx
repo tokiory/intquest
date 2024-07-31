@@ -20,6 +20,7 @@ export const BrowserPage = () => {
 
   // useStore here is only for side effects
   useStore(sectionsStore.state);
+  const isFetchingSections = useStore(sectionsStore.isFetching);
   useStore(filterStore.state);
 
   useEffect(() => {
@@ -59,7 +60,7 @@ export const BrowserPage = () => {
   return (
     <div className={styles.browserpage}>
       <BrowserFilter />
-      {questionList?.some(element => element) ? questionList : <QuestionListStub />}
+      {questionList?.some(element => element) ? questionList : (isFetchingSections ? <></> : <QuestionListStub />)}
       {summary.questions.length > 0 && <SummaryFooter />}
     </div>
   );
