@@ -16,9 +16,29 @@ const tags = {
     color: '#ccec9b',
     name: 'senior',
   },
+  security: {
+    color: '#49d3ff',
+    name: 'security',
+  },
+  deployment: {
+    color: '#e5e5e5',
+    name: 'deployment',
+  },
+  performance: {
+    color: '#79ffd0',
+    name: 'security',
+  },
+  debugging: {
+    color: '#ff9fb9',
+    name: 'debugging',
+  },
   dom: {
     color: '#f1b295',
     name: 'dom',
+  },
+  webcomponents: {
+    color: '#ff8686',
+    name: 'web-components',
   },
   fundamentals: {
     color: '#eaa3c8',

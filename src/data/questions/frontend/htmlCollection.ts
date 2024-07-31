@@ -9,6 +9,10 @@ export const slugs = {
   "block-line": slug('block-line'),
   "alt-required": slug('alt-required'),
   "alt-empty": slug('alt-empty'),
+  "web-components": slug('web-components'),
+  "shadow-dom": slug('shadow-dom'),
+  "custom-elements": slug('custom-elements'),
+  "web-manifest": slug('web-manifest'),
 };
 
 const browserQuestionCollection: QuestionSection = {
@@ -87,9 +91,80 @@ const browserQuestionCollection: QuestionSection = {
       ],
       references: [
         {
-          name: 'MDN',
+          name: 'MDN: <img>',
           link: 'https://developer.mozilla.org/ru/docs/Web/HTML/Element/img#attr-alt',
         }
+      ]
+    },
+    {
+      name: 'Что такое Web Components и как их использовать?',
+      slug: slugs["web-components"],
+      answer: [
+        'Web Components — это набор технологий, которые позволяют создавать переиспользуемые компоненты с использованием HTML, CSS и JavaScript.',
+        'Основные технологии включают Custom Elements, Shadow DOM и HTML Templates.',
+      ],
+      tags: [
+        tags.middle,
+        tags.webcomponents,
+      ],
+      references: [
+        {
+          name: 'MDN: Web Components',
+          link: 'https://developer.mozilla.org/en-US/docs/Web/Web_Components',
+        },
+      ]
+    },
+    {
+      name: 'Что такое Shadow DOM и как его использовать?',
+      slug: slugs["shadow-dom"],
+      answer: [
+        'Shadow DOM — это технология, которая позволяет инкапсулировать DOM и стили компонента, чтобы избежать конфликтов с глобальными стилями и скриптами.',
+        'Shadow DOM используется для создания изолированных компонентов, которые могут быть безопасно использованы в любом контексте.',
+      ],
+      tags: [
+        tags.middle,
+        tags.webcomponents,
+      ],
+      references: [
+        {
+          name: 'MDN: Shadow DOM',
+          link: 'https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM',
+        },
+      ]
+    },
+    {
+      name: 'Что такое Custom Elements и как их создавать?',
+      slug: slugs["custom-elements"],
+      answer: [
+        'Custom Elements — это технология, которая позволяет создавать пользовательские HTML-элементы с использованием JavaScript.',
+        'Они используются для создания переиспользуемых компонентов, которые могут быть использованы в любом контексте.',
+      ],
+      tags: [
+        tags.middle,
+        tags.webcomponents,
+      ],
+      references: [
+        {
+          name: 'MDN: Custom Elements',
+          link: 'https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements',
+        },
+      ]
+    },
+    {
+      name: 'Что такое Web App Manifest и как его использовать?',
+      slug: slugs["web-manifest"],
+      answer: [
+        'Web App Manifest — это файл JSON, который описывает веб-приложение и его метаданные.',
+        'Он используется для создания прогрессивных веб-приложений (PWA), которые могут быть установлены на устройства и работать офлайн.',
+      ],
+      tags: [
+        tags.middle,
+      ],
+      references: [
+        {
+          name: 'MDN: Web App Manifest',
+          link: 'https://developer.mozilla.org/en-US/docs/Web/Manifest',
+        },
       ]
     },
   ]
