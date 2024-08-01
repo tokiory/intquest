@@ -133,6 +133,12 @@ const browserQuestionCollection: QuestionSection = {
             tags: [
                 tags.junior,
             ],
+            references: [
+                {
+                    name: 'Python3 docs. Python Scopes and Namespaces',
+                    link: 'https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces'
+                },
+            ]
         },
         {
             name: 'Порядок разрешения методов',
