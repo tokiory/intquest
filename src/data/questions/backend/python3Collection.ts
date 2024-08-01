@@ -21,7 +21,7 @@ export const slugs = {
 
 const browserQuestionCollection: QuestionSection = {
     title: 'Python 3',
-    icon: 'logos:python',
+    icon: 'fluent-emoji:snake',
     collection: [
         {
             name: 'Как проверить файл .py на синтаксические ошибки, не запуская его?',

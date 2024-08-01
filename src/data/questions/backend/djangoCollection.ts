@@ -13,7 +13,7 @@ export const slugs = {
 
 const browserQuestionCollection: QuestionSection = {
     title: 'Django',
-    icon: 'logos:django-icon',
+    icon: 'fluent-emoji:screwdriver',
     collection: [
         {
             name: 'Перечислите стили наследования модели Django?',
