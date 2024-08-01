@@ -2,7 +2,7 @@ import tags from "@/data/tags";
 import type {QuestionSection} from "@/types/question.types.ts";
 import {createQuestionSlug} from "@/utils/slug.ts";
 
-const slug = createQuestionSlug('django');
+const slug = createQuestionSlug('sql');
 
 export const slugs = {
     subsets: slug('subsets'),
