@@ -15,7 +15,7 @@ export const slugs = {
 
 const browserQuestionCollection: QuestionSection = {
     title: 'SQL',
-    icon: 'mdi:sql-query',
+    icon: 'fluent-emoji:postbox',
     collection: [
         {
             name: 'Из каких подмножеств состоит SQL?',

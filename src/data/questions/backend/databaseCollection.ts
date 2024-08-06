@@ -13,7 +13,7 @@ export const slugs = {
 
 const browserQuestionCollection: QuestionSection = {
     title: 'Database',
-    icon: 'mdi:database',
+    icon: 'fluent-emoji:bento-box',
     collection: [
         {
             name: 'В чем разница между кластеризованным и некластеризованным индексами в SQL?',
