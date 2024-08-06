@@ -7,6 +7,7 @@ const slug = createQuestionSlug('database');
 export const slugs = {
     differenceBetweenClusteredAndNonClustered: slug('difference-between-clustered-and-non-clustered'),
     indexesMulticolumn: slug('indexes-multicolumn'),
+    columnsOrderInCompositeIndex: slug('columns-order-in-composite-index'),
     isolationLevels: slug('indexes-multicolumn'),
     mmvc: slug('mmvc'),
 };
@@ -47,6 +48,26 @@ const browserQuestionCollection: QuestionSection = {
             answer: [
                 'Построенный с посыланием на несколько колонок одновременно. Иначе говоря, это комплексный индекс, ' +
                 'состоящий из нескольких колонок.'
+            ],
+            tags: [
+                tags.junior,
+            ],
+            references: [
+                {
+                    name: 'Postgres docs. Составные индексы',
+                    link: 'https://postgrespro.ru/docs/postgrespro/9.5/indexes-multicolumn'
+                },
+            ]
+        },
+        {
+            name: 'Имеет ли значение порядок колонок в составном индексе?',
+            slug: slugs.columnsOrderInCompositeIndex,
+            answer: [
+                'Да.',
+                'При создании составного индекса сначала строится обычный индекс для его первой колонки, ' +
+                'а потом уже на основе него строится индекс для второй колонки и так дальше.',
+                'Другими словами, колонки, по которым поиск выполняется чаще всего, должны стоять в составном ' +
+                'индексе первыми.'
             ],
             tags: [
                 tags.junior,
