@@ -8,6 +8,7 @@ export const slugs = {
     differenceBetweenClusteredAndNonClustered: slug('difference-between-clustered-and-non-clustered'),
     indexesMulticolumn: slug('indexes-multicolumn'),
     isolationLevels: slug('indexes-multicolumn'),
+    mmvc: slug('mmvc'),
 };
 
 const browserQuestionCollection: QuestionSection = {
@@ -82,6 +83,28 @@ const browserQuestionCollection: QuestionSection = {
                 {
                     name: 'Уровни изолированности транзакций для самых маленьких',
                     link: 'https://habr.com/ru/articles/469415/'
+                },
+            ]
+        },
+        {
+            name: 'Что такое MVCC?',
+            slug: slugs.mmvc,
+            answer: [
+                'Это механизм управления параллельным доступом к данным в базе данных',
+                ' MVCC позволяет разным транзакциям видеть базу данных в разных “версиях” (или состояниях), ' +
+                'что обеспечивает высокую степень изоляции и консистентности данных.',
+            ],
+            tags: [
+                tags.middle,
+            ],
+            references: [
+                {
+                    name: 'Транзакции и MVCC в PostgreSQL',
+                    link: 'https://aristov.tech/blog/tranzakczii-i-mvcc/'
+                },
+                {
+                    name: 'Как MVCC работает в реляционных базах данных',
+                    link: 'https://appmaster.io/ru/blog/mvcc-v-reliatsionnykh-bazakh-dannykh'
                 },
             ]
         },
