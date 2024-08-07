@@ -4,11 +4,13 @@ import {map} from "nanostores";
 interface FilterStoreState {
   tags: QuestionTag[];
   search: string;
+  fold: string[];
 }
 
 const $filterStore = map<FilterStoreState>({
   tags: [],
   search: '',
+  fold: [],
 });
 
 const filterStore = {
@@ -34,6 +36,12 @@ const filterStore = {
     remove(id: QuestionTag['name']) {
       const store = $filterStore.get();
       $filterStore.setKey('tags', store.tags.filter(tag => tag.name !== id));
+    }
+  },
+  fold: {
+    toggle(key: string) {
+      const folds = $filterStore.get().fold;
+      $filterStore.setKey('fold', folds.includes(key) ? folds.filter(item => item !== key) : [...folds, key]);
     }
   },
   search: {

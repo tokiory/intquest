@@ -12,6 +12,7 @@ import {computed} from "nanostores";
 import {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import styles from './browserpage.module.scss';
+import clsx from "clsx";
 
 export const BrowserPage = () => {
   const path = useLocation();
@@ -20,7 +21,7 @@ export const BrowserPage = () => {
 
   // useStore here is only for side effects
   useStore(sectionsStore.state);
-  const isFetchingSections = useStore(sectionsStore.isFetching);
+  const isFetchingSections = useStore(sectionsStore.state).fetchState === 'loading';
   useStore(filterStore.state);
 
   useEffect(() => {
@@ -28,34 +29,40 @@ export const BrowserPage = () => {
   }, []);
 
   const filteredSections = computed(
-    [sectionsStore.state, filterStore.state], (sections, filters) => {
-      return sections.map(section => {
+    [sectionsStore.state, filterStore.state], (sectionStore, filterStore) => {
+      const sections = sectionStore.sections;
+      return sections.map((section) => {
         const collection = section.collection
           .filter(question => {
             const questionTags = question.tags?.map(item => item.name);
-            return question.name.toLowerCase().includes(filters.search.toLowerCase())
-              && filters.tags.every(tag => questionTags?.includes(tag.name));
+            return question.name.toLowerCase().includes(filterStore.search.toLowerCase())
+              && filterStore.tags.every(tag => questionTags?.includes(tag.name));
           });
 
         return {
           ...section,
           collection
         };
-      })
+      });
   });
 
-  const questionList = filteredSections.get().map((section) => (
-    section.collection.length > 0 && <div className={styles.questions} key={section.title}>
+  const isSectionFolded = (key: string) => filterStore.state.get().fold.includes(key);
+
+  const questionList = filteredSections.get().map((section) => {
+
+    const isFolded = isSectionFolded(section.title);
+
+    return (section.collection.length > 0 && <div className={clsx(styles.questions, isFolded && styles.questions_folded)} key={section.title}>
       <div className={styles.questions__header}>
-        <Title className={styles.questions__title}>
+        <Title onClick={() => filterStore.fold.toggle(section.title)} dimmed={isFolded} className={styles.questions__title}>
           {section.icon && <Icon icon={section?.icon} />}
           {section.title}
         </Title>
         <Title className={styles.questions__amount} size={"sm"}>{section.collection.length}</Title>
       </div>
-      <QuestionList className={styles.browserpage__collection} list={section.collection} />
-    </div>
-  ));
+      {isFolded ? <></> : <QuestionList className={styles.browserpage__collection} list={section.collection} />}
+    </div>)
+  });
 
   const stub = isFetchingSections ? <></> : <QuestionListStub />
 

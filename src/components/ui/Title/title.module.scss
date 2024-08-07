@@ -2,6 +2,7 @@
   font-weight: 800;
   display: inline-block;
   line-height: 1.5;
+  user-select: none;
 
   &_md {
     font-size: 24px;
@@ -13,5 +14,10 @@
 
   &_lg {
     font-size: 48px;
+  }
+
+  &_dimmed {
+    color: var(--color-foreground-tertiary);
+    text-decoration: line-through;
   }
 }

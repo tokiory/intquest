@@ -1,32 +1,40 @@
+import type { FetchState } from "@/types/common.types";
 import type {Question, QuestionModule} from "@/types/question.types.ts";
 import type {QuestionSection} from "@/types/question.types.ts";
 import {sortQuestion} from "@/utils/sortQuestion.ts";
-import {atom, computed} from "nanostores";
+import {computed, map} from "nanostores";
 
-const $sectionsStore = atom<QuestionSection[]>([]);
-const $isFetching = atom(false);
+const $sectionsStore = map<SectionsStoreState>({
+  sections: [],
+  fetchState: 'idle',
+})
 
-const flattenedQuestions = computed($sectionsStore, sections =>
+interface SectionsStoreState {
+  sections: QuestionSection[];
+  fetchState: FetchState;
+}
+
+const transformSectionModule = async (module: QuestionModule) => {
+  return module.default;
+};
+
+
+const flattenedQuestions = computed($sectionsStore, state =>
   // eslint-disable-next-line unicorn/no-array-reduce
-  sections.reduce<Question[]>((accumulator, section) => [...accumulator, ...section.collection], [])
+  state.sections.reduce<Question[]>((accumulator, section) => [...accumulator, ...section.collection], [])
 );
 
 const sectionsStore = {
   state: $sectionsStore,
-  isFetching: $isFetching,
   find(slug: Question['slug']) {
     return flattenedQuestions.get()?.find(item => item.slug === slug);
   },
 
   async fetch(collection: string) {
-    this.state.set([])
-    this.isFetching.set(true);
+    this.state.setKey('sections', []);
+    this.state.setKey('fetchState', 'loading');
     const fetchSections = async () =>
       import(`../data/questions/${collection}/index.ts`);
-
-    const transformSectionModule = async (module: QuestionModule) => {
-      return module.default;
-    };
 
     fetchSections()
       .then(transformSectionModule)
@@ -35,9 +43,12 @@ const sectionsStore = {
           ...section,
           collection: section.collection.sort(sortQuestion),
         }));
-        this.state.set(sortedSections);
-        this.isFetching.set(false);
-      });
+        this.state.setKey('sections', sortedSections);
+        this.state.setKey('fetchState', 'success');
+      })
+      .catch(() => {
+        this.state.setKey('fetchState', 'error');
+      })
   }
 }
 
