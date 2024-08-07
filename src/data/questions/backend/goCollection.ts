@@ -1,6 +1,6 @@
 import tags from "@/data/tags";
-import type {QuestionSection} from "@/types/question.types.ts";
-import {createQuestionSlug} from "@/utils/slug.ts";
+import type { QuestionSection } from "@/types/question.types.ts";
+import { createQuestionSlug } from "@/utils/slug.ts";
 
 const slug = createQuestionSlug('go');
 const slugs = {
@@ -16,6 +16,9 @@ const slugs = {
   pointers: slug('pointers'),
   slices: slug('slices'),
   maps: slug('maps'),
+  mapRealisation: slug('map-realisation'),
+  mapBucketMemory: slug('map-bucket-memory'),
+  mapEvacuation: slug('map-evacuation'),
   channels: slug('channels'),
   goroutines: slug('goroutines'),
   testing: slug('testing'),
@@ -246,6 +249,76 @@ const goQuestionCollection: QuestionSection = {
         {
           name: 'Go Spec: Maps',
           link: 'https://golang.org/doc/effective_go.html#maps',
+        }
+      ]
+    },
+    {
+      name: 'Как реализована map в Go?',
+      slug: slugs.mapRealisation,
+      answer: [
+        'В Go тип данных map реализован как хеш-таблица с открытой адресацией. В основе лежит массив указателей на бакеты (bmap), где каждый бакет содержит несколько пар "ключ-значение". Для каждого ключа вычисляется хеш-значение, которое определяет, в какой бакет попадет пара. Если бакет заполняется, создаются дополнительные бакеты (overflow buckets).',
+        'Хеш-таблица автоматически изменяет свой размер при достижении определенного уровня заполнения, чтобы поддерживать эффективность операций добавления, удаления и поиска.'
+      ],
+      tags: [
+        tags.junior,
+        tags.fundamentals,
+      ],
+      references: [
+        {
+          name: 'Go Spec: Maps',
+          link: 'https://golang.org/doc/effective_go.html#maps',
+        },
+        {
+          name: 'Habr: Собеседование Golang разработчика (теоретические вопросы), Часть I',
+          link: 'https://habr.com/ru/articles/654569/'
+        }
+      ]
+    },
+    {
+      name: 'Почему нельзя брать ссылку на значение, хранящееся по ключу в map?',
+      slug: slugs.mapBucketMemory,
+      answer: [
+        'Нельзя брать ссылку на значение, хранящееся по ключу в map в Go, потому что элементы карты могут перемещаться в памяти во время операций с картой. Это связано с внутренней реализацией хеш-таблицы. Когда карта изменяет размер или перераспределяет элементы, данные могут быть перемещены в новые бакеты, что делает ссылки на значения потенциально недействительными.',
+        'Таким образом, запрещено брать ссылку на значение, чтобы предотвратить доступ к устаревшим или некорректным данным, что могло бы привести к ошибкам и некорректному поведению программы.',
+      ],
+      tags: [
+        tags.junior,
+        tags.fundamentals,
+      ],
+      references: [
+        {
+          name: 'Go Spec: Maps',
+          link: 'https://golang.org/doc/effective_go.html#maps',
+        },
+        {
+          name: 'Habr: Собеседование Golang разработчика (теоретические вопросы), Часть I',
+          link: 'https://habr.com/ru/articles/654569/'
+        }
+      ]
+    },
+    {
+      name: 'Что такое эвакуация, и в каком случае она будет происходить?',
+      slug: slugs.mapEvacuation,
+      answer: [
+        'Эвакуация в контексте карты (map) в Go — это процесс перераспределения элементов карты в новые бакеты. Этот процесс происходит, когда хеш-таблица изменяет свой размер, что называется "расширением" или "реорганизацией".',
+        '',
+        'Эвакуация происходит в следующих случаях:',
+        '1. Переполнение бакетов: Когда один или несколько бакетов становятся слишком заполненными, может потребоваться увеличение размера карты, чтобы уменьшить количество коллизий и улучшить производительность.',
+        '2. Изменение размера: Когда количество элементов в карте достигает определенного порогового значения, система автоматически увеличивает размер хеш-таблицы, чтобы поддерживать баланс между загрузкой и производительностью.',
+        '3. Во время эвакуации все элементы из старых бакетов перераспределяются по новым бакетам согласно их хеш-значениям. Это требует пересчета хеш-значений и копирования элементов в новые места в памяти.'
+      ],
+      tags: [
+        tags.junior,
+        tags.fundamentals,
+      ],
+      references: [
+        {
+          name: 'Go Spec: Maps',
+          link: 'https://golang.org/doc/effective_go.html#maps',
+        },
+        {
+          name: 'Habr: Собеседование Golang разработчика (теоретические вопросы), Часть I',
+          link: 'https://habr.com/ru/articles/654569/'
         }
       ]
     },
