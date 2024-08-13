@@ -37,7 +37,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'В чем разница между кластеризованным и некластеризованным индексами в SQL?',
+                    name: 'Yandex Questions: В чем разница между кластеризованным и некластеризованным индексами в SQL?',
                     link: 'https://yandex.ru/q/datascience/10931953921/'
                 },
             ]
@@ -54,7 +54,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Postgres docs. Составные индексы',
+                    name: 'Postgres Docs: Составные индексы',
                     link: 'https://postgrespro.ru/docs/postgrespro/9.5/indexes-multicolumn'
                 },
             ]
@@ -74,7 +74,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Postgres docs. Составные индексы',
+                    name: 'Postgres Docs: Составные индексы',
                     link: 'https://postgrespro.ru/docs/postgrespro/9.5/indexes-multicolumn'
                 },
             ]
@@ -98,7 +98,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Postgres docs. Изоляция транзакций',
+                    name: 'Postgres Docs: Изоляция транзакций',
                     link: 'https://postgrespro.ru/docs/postgrespro/9.5/transaction-iso'
                 },
                 {

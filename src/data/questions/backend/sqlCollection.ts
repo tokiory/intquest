@@ -36,7 +36,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'DDL, DML, DCL и TCL в языке SQL',
+                    name: 'Sky Pro: DDL, DML, DCL и TCL в языке SQL',
                     link: 'https://sky.pro/media/gruppy-operatorov-sql/'
                 },
             ]
