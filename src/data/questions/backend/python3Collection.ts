@@ -38,7 +38,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. py_compile',
+                    name: 'Python 3 Docs: py_compile',
                     link: 'https://docs.python.org/3/library/py_compile.html'
                 },
             ]
@@ -63,7 +63,7 @@ const browserQuestionCollection: QuestionSection = {
                     link: 'https://web.archive.org/web/20200221224620id_/http://effbot.org/zone/default-values.htm'
                 },
                 {
-                    name: 'Python3 docs. Function definitions',
+                    name: 'Python3 Docs: Function definitions',
                     link: 'https://docs.python.org/3/reference/compound_stmts.html#function-definitions'
                 },
             ]
@@ -85,15 +85,15 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. Iterator term',
+                    name: 'Python 3 Docs: Iterator term',
                     link: 'https://docs.python.org/3/glossary.html#term-iterator'
                 },
                 {
-                    name: 'Python 3 Docs. Iter',
+                    name: 'Python 3 Docs: Iter',
                     link: 'https://docs.python.org/3/library/functions.html#iter'
                 },
                 {
-                    name: 'Python 3 Docs. Next',
+                    name: 'Python 3 Docs: Next',
                     link: 'https://docs.python.org/3/library/functions.html#next'
                 },
             ]
@@ -111,7 +111,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. Handling exceptions',
+                    name: 'Python 3 Docs: Handling exceptions',
                     link: 'https://docs.python.org/3/tutorial/errors.html#handling-exceptions'
                 },
             ]
@@ -135,7 +135,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. Python Scopes and Namespaces',
+                    name: 'Python 3 Docs: Python Scopes and Namespaces',
                     link: 'https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces'
                 },
             ]
@@ -161,15 +161,15 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. Method Resolution Order',
+                    name: 'Python 3 Docs: Method Resolution Order',
                     link: 'https://docs.python.org/3/howto/mro.html#python-2-3-mro'
                 },
                 {
-                    name: 'Python 3 Docs. __mro__',
+                    name: 'Python 3 Docs: __mro__',
                     link: 'https://docs.python.org/3/library/stdtypes.html#class.__mro__'
                 },
                 {
-                    name: 'Python 3 Docs. Custom classes',
+                    name: 'Python 3 Docs: Custom classes',
                     link: 'https://docs.python.org/3/library/stdtypes.html#class.__mro__'
                 },
             ]
@@ -191,11 +191,11 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. Complied python files',
+                    name: 'Python 3 Docs: Complied python files',
                     link: 'https://docs.python.org/3/tutorial/modules.html#compiled-python-files'
                 },
                 {
-                    name: 'Python 3 Docs. Term bytecode',
+                    name: 'Python 3 Docs: Term bytecode',
                     link: 'https://docs.python.org/3/glossary.html#term-bytecode'
                 },
             ]
@@ -216,7 +216,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. __slots__',
+                    name: 'Python 3 Docs: __slots__',
                     link: 'https://docs.python.org/3/reference/datamodel.html#slots'
                 },
                 {
@@ -246,7 +246,7 @@ const browserQuestionCollection: QuestionSection = {
                     link: 'https://svemaraju.github.io/python-string-interning.html'
                 },
                 {
-                    name: 'Python 3 Docs. Sys.intern',
+                    name: 'Python 3 Docs: Sys.intern',
                     link: 'https://docs.python.org/3/library/sys.html#sys.intern'
                 },
             ]
@@ -268,7 +268,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. Metaclasses',
+                    name: 'Python 3 Docs: Metaclasses',
                     link: 'https://docs.python.org/3/reference/datamodel.html#metaclasses'
                 },
             ]
@@ -291,7 +291,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Python 3 Docs. sys.setrecursionlimit',
+                    name: 'Python 3 Docs: sys.setrecursionlimit',
                     link: 'https://docs.python.org/3.11/library/sys.html#sys.setrecursionlimit'
                 },
                 {
