@@ -1,1 +1,1 @@
-export {QuestionItem} from './QuestionItem.tsx';
+export {QuestionItem} from './question-item.tsx';

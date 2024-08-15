@@ -123,10 +123,6 @@ const browserQuestionCollection: QuestionSection = {
                     name: 'Транзакции и MVCC в PostgreSQL',
                     link: 'https://aristov.tech/blog/tranzakczii-i-mvcc/'
                 },
-                {
-                    name: 'Как MVCC работает в реляционных базах данных',
-                    link: 'https://appmaster.io/ru/blog/mvcc-v-reliatsionnykh-bazakh-dannykh'
-                },
             ]
         },
     ]

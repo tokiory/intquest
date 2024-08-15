@@ -1,1 +1,1 @@
-export {QuestionTag} from './QuestionTag.tsx';
+export {QuestionTag} from './question-tag.tsx';

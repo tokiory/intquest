@@ -1,1 +1,1 @@
-export {QuestionList} from './QuestionList.tsx';
+export {QuestionList} from './question-list.tsx';

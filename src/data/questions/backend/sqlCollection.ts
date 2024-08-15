@@ -36,8 +36,8 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Sky Pro: DDL, DML, DCL и TCL в языке SQL',
-                    link: 'https://sky.pro/media/gruppy-operatorov-sql/'
+                    name: 'GeeksforGeeks: DDL, DML, DCL и TCL в языке SQL',
+                    link: 'https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/'
                 },
             ]
         },
@@ -64,15 +64,15 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Типы соединения',
+                    name: 'LearnDB: Типы соединения',
                     link: 'https://learndb.ru/articles/article/30'
                 },
                 {
-                    name: '8 способов объединения (JOIN) таблиц в SQL. Часть 1',
+                    name: 'DataReview: 8 способов объединения (JOIN) таблиц в SQL. Часть 1',
                     link: 'https://datareview.info/article/8-sposobov-obedineniya-join-tablic-v-sql-chast-1/'
                 },
                 {
-                    name: '8 способов объединения (JOIN) таблиц в SQL. Часть 2',
+                    name: 'DataReview: 8 способов объединения (JOIN) таблиц в SQL. Часть 2',
                     link: 'https://datareview.info/article/8-sposobov-obedineniya-join-tablic-v-sql-chast-2/'
                 },
             ]
@@ -93,7 +93,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'SQL Functions (Aggregate and Scalar Functions)',
+                    name: 'GeeksforGeeks: SQL Functions (Aggregate and Scalar Functions)',
                     link: 'https://www.geeksforgeeks.org/sql-functions-aggregate-scalar-functions/'
                 },
             ]
@@ -109,7 +109,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'SQL Query Order of Execution',
+                    name: 'Sisense: SQL Query Order of Execution',
                     link: 'https://www.sisense.com/blog/sql-query-order-of-operations/'
                 },
             ]
@@ -131,11 +131,11 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Understanding the Difference: Subquery vs. Correlated Query',
+                    name: 'Dev.to: Understanding the Difference: Subquery vs. Correlated Query',
                     link: 'https://dev.to/pwn0x80/subquery-vs-correlated-query-1622'
                 },
                 {
-                    name: 'Difference between Nested & Correlated Subqueries',
+                    name: 'Oracle SQL & PL/SQL: Difference between Nested & Correlated Subqueries',
                     link: 'https://sql-plsql.blogspot.com/2011/09/difference-nested-correlated-subquery.html'
                 },
             ]
@@ -156,10 +156,6 @@ const browserQuestionCollection: QuestionSection = {
                 tags.middle,
             ],
             references: [
-                {
-                    name: 'Сравнение производительности: JOIN против подзапросов в SQL',
-                    link: 'https://sky.pro/wiki/sql/sravnenie-proizvoditelnosti-join-protiv-podzaprosov-v-sql/'
-                },
                 {
                     name: 'Вложенные запросы против JOIN в SQL',
                     link: 'https://teletype.in/@pythontalk/subquery_vs_join'

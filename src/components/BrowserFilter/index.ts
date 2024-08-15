@@ -1,1 +1,1 @@
-export {BrowserFilter} from './BrowserFilter.tsx';
+export {BrowserFilter} from './browser-filter.tsx';

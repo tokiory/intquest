@@ -1,1 +1,1 @@
-export {SummaryFooter} from './SummaryFooter.tsx'
+export {SummaryFooter} from './summary-footer.tsx'

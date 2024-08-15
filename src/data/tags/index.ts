@@ -1,77 +1,74 @@
-export interface IntquestTag {
-  name: string;
-  color: `#${string}`;
-}
+import type { QuestionTag } from "@/types/question.types.ts";
 
 const tags = {
   junior: {
-    color: '#f3dd88',
+    color: 'yellow',
     name: 'junior'
   },
   middle: {
-    color: '#83bde3',
+    color: 'blue',
     name: 'middle'
   },
   senior: {
-    color: '#ccec9b',
+    color: 'lime',
     name: 'senior',
   },
   security: {
-    color: '#49d3ff',
+    color: 'teal',
     name: 'security',
   },
   deployment: {
-    color: '#e5e5e5',
+    color: 'slate',
     name: 'deployment',
   },
   performance: {
-    color: '#79ffd0',
+    color: 'green',
     name: 'security',
   },
   debugging: {
-    color: '#ff9fb9',
+    color: 'red',
     name: 'debugging',
   },
   dom: {
-    color: '#f1b295',
+    color: 'orange',
     name: 'dom',
   },
   webcomponents: {
-    color: '#ff8686',
+    color: 'red',
     name: 'web-components',
   },
   fundamentals: {
-    color: '#eaa3c8',
+    color: 'pink',
     name: 'fundamentals'
   },
   function: {
-    color: '#53d9b5',
+    color: 'emerald',
     name: 'function'
   },
   es6: {
-    color: '#e598dd',
+    color: 'sky',
     name: 'es6'
   },
   reactivity: {
-    color: '#a9a4e5',
+    color: 'purple',
     name: 'reactivity'
   },
   vue3: {
-    color: '#83d78e',
+    color: 'lime',
     name: 'vue-3',
   },
   vue2: {
-    color: '#faf7bb',
+    color: 'amber',
     name: 'vue-2',
   },
   vuex: {
-    color: '#62d2c1',
+    color: 'green',
     name: 'vuex'
   },
   pinia: {
-    color: '#e8d42f',
+    color: 'orange',
     name: 'pinia',
   }
-} as const satisfies Record<string, IntquestTag>;
+} as const satisfies Record<string, QuestionTag>;
 
 export default tags;

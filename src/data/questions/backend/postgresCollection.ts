@@ -167,7 +167,7 @@ const browserQuestionCollection: QuestionSection = {
                     link: 'https://www.postgresql.org/docs/current/geqo-pg-intro.html'
                 },
                 {
-                    name: 'Хабр: Как работает оптимизатор PostgreSQL при большом количестве таблиц в запросе',
+                    name: 'Habr: Как работает оптимизатор PostgreSQL при большом количестве таблиц в запросе',
                     link: 'https://habr.com/ru/companies/postgrespro/articles/662021/'
                 },
             ]

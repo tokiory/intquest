@@ -1,4 +1,5 @@
 import {DefaultLayout} from "@/layout";
+import { ProPage } from "@/pages/pro-page.tsx";
 import {createBrowserRouter} from "react-router-dom";
 import {BrowserPage, HomePage, SummaryPage, ErrorPage} from "@/pages";
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/summary',
         element: <SummaryPage />
+      },
+      {
+        path: '/pro',
+        element: <ProPage />
       }
     ]
   },

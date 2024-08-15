@@ -32,7 +32,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Django docs. Model inheritance',
+                    name: 'Django Docs: Model inheritance',
                     link: 'https://docs.djangoproject.com/en/5.0/topics/db/models/#model-inheritance'
                 },
             ]
@@ -53,11 +53,11 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Django docs. Automatic primary key fields',
+                    name: 'Django Docs: Automatic primary key fields',
                     link: 'https://docs.djangoproject.com/en/5.1/topics/db/models/#automatic-primary-key-fields'
                 },
                 {
-                    name: 'Django docs. Unique together',
+                    name: 'Django Docs: Unique together',
                     link: 'https://docs.djangoproject.com/en/5.0/ref/models/options/#unique-together'
                 },
             ]
@@ -78,7 +78,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Django docs. How Django processes a request',
+                    name: 'Django Docs: How Django processes a request',
                     link: 'https://docs.djangoproject.com/en/5.0/topics/http/urls/#how-django-processes-a-request'
                 },
             ]
@@ -96,7 +96,7 @@ const browserQuestionCollection: QuestionSection = {
             ],
             references: [
                 {
-                    name: 'Django docs. How can I see the raw SQL queries Django is running?',
+                    name: 'Django Docs: How can I see the raw SQL queries Django is running?',
                     link: 'https://docs.djangoproject.com/en/5.0/faq/models/#how-can-i-see-the-raw-sql-queries-django-is-running'
                 },
             ]

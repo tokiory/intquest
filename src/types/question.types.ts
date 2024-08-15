@@ -7,7 +7,7 @@ export interface QuestionReference {
 
 export interface QuestionTag {
   name: string;
-  color: `#${string}`;
+  color: "yellow" | "blue" | "green" | "red" | "purple" | "pink" | "slate" | "orange" | "amber" | "lime" | "cyan" | "teal" | "sky" | "emerald";
 }
 
 export interface Question {

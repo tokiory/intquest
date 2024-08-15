@@ -1,1 +1,1 @@
-export {QuestionListStub} from './QuestionListStub.tsx';
+export {QuestionListStub} from './question-list-stub.tsx';
