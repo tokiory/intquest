@@ -8,7 +8,7 @@ export const QuestionItemDescription = ({
 }: QuestionItemDescriptionProperties) => {
   return (
     <div className="pt-4">
-      <Text className="font-bold">Краткое описание:</Text>
+      <Text className="font-medium">Краткое описание:</Text>
       {answer.map((text, index) => (
         <div key={index} className="leading-6 text-sm">
           {text}

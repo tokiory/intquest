@@ -38,7 +38,7 @@ export const Header = () => {
             <Button asChild>
               <Link to="/pro" className="flex gap-2">
                 Купить Pro
-                <Icon className="text-white" icon="gravity-ui:star" />
+                <Icon icon="gravity-ui:star" />
               </Link>
             </Button>
           )}
