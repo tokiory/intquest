@@ -5,3 +5,4 @@ export * from "./input";
 export * from "./text";
 export * from "./card";
 export * from "./badge";
+export * from "./tooltip";

@@ -1,3 +1,4 @@
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui";
 import { Icon } from "@iconify-icon/react/dist/iconify.js";
@@ -34,6 +35,7 @@ export const Header = () => {
                 </Link>
               ))}
           </div>
+          <ThemeToggle />
           {FEATURES.premium && (
             <Button asChild>
               <Link to="/pro" className="flex gap-2">

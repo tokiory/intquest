@@ -86,6 +86,7 @@ export const ProPage = () => {
     },
     { accessible: true, limited: true, text: "Возможность поделиться коллекцией вопросов" },
     { accessible: false, text: "Просмотр истории вопросов" },
+    { accessible: false, text: "Продвинутый конструктор вопросов" },
     { accessible: false, text: "Возможность отправить анкету вопросов кандидату" },
     { accessible: false, text: "Возможность развернуть свою копию Intquest для корпоративного использования" },
     { accessible: false, text: "Просмотр отчетов кандидата в Telegram" },

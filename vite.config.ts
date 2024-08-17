@@ -1,23 +1,29 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import {fileURLToPath} from "node:url";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import { fileURLToPath } from "node:url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  envPrefix: "IQ_",
   server: {
     port: 5111,
-
   },
   css: {
     modules: {
-      localsConvention: 'dashesOnly',
+      localsConvention: "dashesOnly",
     },
   },
   resolve: {
     alias: [
-      { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
-      { find: '@shared', replacement: fileURLToPath(new URL('./shared', import.meta.url)) },
-    ]
-  }
-})
+      {
+        find: "@",
+        replacement: fileURLToPath(new URL("./src", import.meta.url)),
+      },
+      {
+        find: "@shared",
+        replacement: fileURLToPath(new URL("./shared", import.meta.url)),
+      },
+    ],
+  },
+});
