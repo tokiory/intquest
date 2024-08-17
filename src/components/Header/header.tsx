@@ -10,7 +10,12 @@ interface HeaderLink {
 }
 
 export const Header = () => {
-  const links: HeaderLink[] = [];
+  const links: HeaderLink[] = [
+    {
+      name: "Юзкейсы",
+      to: "/use-case",
+    },
+  ];
 
   FEATURES.history && links.push({ name: "History", to: "/history" });
   FEATURES.randomizer &&
@@ -30,7 +35,11 @@ export const Header = () => {
           <div className="flex gap-4">
             {links.length > 0 &&
               links.map((link) => (
-                <Link key={link.name} to={link.to}>
+                <Link
+                  className="font-medium text-sm text-stone-900 hover:text-stone-700 dark:text-stone-50 dark:hover:text-stone-200"
+                  key={link.name}
+                  to={link.to}
+                >
                   {link.name}
                 </Link>
               ))}

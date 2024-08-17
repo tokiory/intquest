@@ -6,3 +6,4 @@ export * from "./text";
 export * from "./card";
 export * from "./badge";
 export * from "./tooltip";
+export * from "./link";

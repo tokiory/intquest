@@ -1,5 +1,5 @@
 import { SectionList } from "@/components/SectionList/section-list.tsx";
-import { Text } from "@/components/ui";
+import { Link, Text } from "@/components/ui";
 import backend from "@/data/questions/backend";
 import devops from "@/data/questions/devops";
 import frontend from "@/data/questions/frontend";
@@ -36,6 +36,13 @@ export const HomePage = () => {
           Общее количество вопросов: {totalQuestionAmount}
         </span>
       </Text>
+
+      <Link
+        to="/use-case"
+        className="text-center mt-2 text-stone-500 hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-400 text-sm"
+      >
+        Как пользоваться Intquest?
+      </Link>
 
       <div className="mt-auto max-w-3xl text-center">
         Intquest предоставляет собеседующему огромный выбор вопросов для
