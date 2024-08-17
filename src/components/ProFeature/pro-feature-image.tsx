@@ -7,10 +7,13 @@ export interface ProFeatureImageProperties {
   className?: string;
 }
 
-export const ProFeatureImage: FC<ProFeatureImageProperties> = ({ image, className }) => {
+export const ProFeatureImage: FC<ProFeatureImageProperties> = ({
+  image,
+  className,
+}) => {
   return (
     <Card className={clsx("flex items-center justify-center p-4", className)}>
-      <img src={image} alt="feature" />
+      <img src={image} alt="feature" className="dark:invert" />
     </Card>
-  )
-}
+  );
+};
