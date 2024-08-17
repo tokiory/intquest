@@ -1,5 +1,5 @@
 export interface Section {
   name: string;
-  link: `/${string}`;
+  path: `/${string}`;
   icon: `${string}:${string}`;
 }

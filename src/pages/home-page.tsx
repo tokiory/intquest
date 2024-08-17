@@ -6,9 +6,14 @@ import frontend from "@/data/questions/frontend";
 import qa from "@/data/questions/qa";
 import { Icon } from "@iconify-icon/react";
 import { useMemo } from "react";
-import sections from "@/data/sections.ts";
+import { useFetch } from "@/hooks/useFetch";
+import type { Section } from "@/types/sections.types";
 
 export const HomePage = () => {
+  // TODO: Rename interface Section to Category
+  const { data: categories, status: categoriesStatus } =
+    useFetch<Section[]>("/category");
+
   const totalQuestionAmount = useMemo(() => {
     const chapters = [backend, devops, frontend, qa];
     return chapters
@@ -29,7 +34,9 @@ export const HomePage = () => {
         </span>
         <span>ion</span>
       </div>
-      <SectionList className="mt-6" list={sections} />
+      {categoriesStatus === "success" && (
+        <SectionList className="mt-6" list={categories} />
+      )}
 
       <Text size="sm" className="text-center color-secondary">
         <span title="А хотелось бы 1000...">

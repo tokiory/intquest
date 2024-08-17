@@ -1,4 +1,4 @@
-import type {Section} from "@/types/sections.types.ts";
+import type { Section } from "@/types/sections.types.ts";
 
 const getSectionUrl = (slug: string): `/${string}` => {
   return `/browse/${slug}`;
@@ -6,24 +6,24 @@ const getSectionUrl = (slug: string): `/${string}` => {
 
 const sections: Section[] = [
   {
-    name: 'Frontend',
-    link: getSectionUrl('frontend'),
-    icon: 'fe:coffee',
+    name: "Frontend",
+    path: getSectionUrl("frontend"),
+    icon: "fe:coffee",
   },
   {
-    name: 'Backend',
-    link: getSectionUrl('backend'),
-    icon: 'fe:terminal'
+    name: "Backend",
+    path: getSectionUrl("backend"),
+    icon: "fe:terminal",
   },
   {
-    name: 'QA',
-    link: getSectionUrl('qa'),
-    icon: 'fe:question',
+    name: "QA",
+    path: getSectionUrl("qa"),
+    icon: "fe:question",
   },
   {
-    name: 'DevOps',
-    link: getSectionUrl('devops'),
-    icon: 'fe:scale',
+    name: "DevOps",
+    path: getSectionUrl("devops"),
+    icon: "fe:scale",
   },
 ];
 

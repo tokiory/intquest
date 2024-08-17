@@ -13,7 +13,7 @@ export const SectionList = ({ list, className }: SectionListProperties) => {
   return (
     <div className={clsx("flex my-3 gap-6", className)}>
       {list.map((item, index) => (
-        <Link to={item.link} key={index}>
+        <Link to={item.path} key={index}>
           <Button>
             <Icon className="mr-2" icon={item.icon} size={200} />
             {item.name}
