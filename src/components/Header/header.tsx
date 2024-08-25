@@ -32,7 +32,7 @@ export const Header = () => {
         </Link>
 
         <div className="flex gap-6 text-base items-center">
-          <div className="flex gap-4">
+          <div className="hidden sm:flex gap-4">
             {links.length > 0 &&
               links.map((link) => (
                 <Link

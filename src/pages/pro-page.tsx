@@ -33,13 +33,13 @@ export const ProPage = () => {
     },
     {
       type: "image",
-      className: "col-span-1",
+      className: "col-span-1 hidden sm:block",
       image: "/illustrations/meditating.svg",
     },
     {
       type: "image",
       image: "/illustrations/share.svg",
-      className: "col-span-2 row-span-2",
+      className: "col-span-2 row-span-2 hidden sm:block",
     },
     {
       type: "description",
@@ -61,7 +61,7 @@ export const ProPage = () => {
     },
     {
       type: "image",
-      className: "col-span-2 border-none shadow-none",
+      className: "col-span-2 border-none shadow-none hidden sm:block",
       image: "/illustrations/loosing-data.png",
     },
     {
@@ -73,9 +73,10 @@ export const ProPage = () => {
     {
       type: "image" as const,
       image: "/illustrations/reading.svg",
-      className: "col-span-1",
+      className: "col-span-1 hidden sm:block",
     },
   ];
+
   const freeVersionComparsionList = [
     {
       accessible: true,
@@ -127,7 +128,7 @@ export const ProPage = () => {
       <Title className="flex gap-2 justify-center mb-12 text-center">
         Intquest Pro <Icon icon="fluent-emoji:sparkles" />
       </Title>
-      <div className="grid grid-cols-5 gap-3 w-full">
+      <div className="flex flex-col sm:grid grid-cols-5 gap-3 w-full">
         {cards.map((card, index) =>
           card.type === "description" ? (
             <ProFeature key={index} {...card} />
@@ -136,8 +137,8 @@ export const ProPage = () => {
           ),
         )}
       </div>
-      <div className="grid grid-cols-2 gap-3 mt-12 w-full">
-        <Card>
+      <div className="sm:grid grid-cols-2 gap-3 mt-12 w-full">
+        <Card className="hidden sm:block">
           <CardHeader>
             <CardTitle>Intquest</CardTitle>
             <CardDescription>

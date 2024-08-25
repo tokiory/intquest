@@ -9,7 +9,7 @@ export const QuestionItemHeader = ({
   tags,
 }: QuestionItemHeaderProperties) => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col sm:flex-row gap-2 sm:items-center justify-between">
       <Text className="font-medium">{name}</Text>
 
       <div className="flex gap-2">

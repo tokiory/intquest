@@ -11,7 +11,7 @@ interface SectionListProperties {
 
 export const SectionList = ({ list, className }: SectionListProperties) => {
   return (
-    <div className={clsx("flex my-3 gap-6", className)}>
+    <div className={clsx("flex flex-wrap justify-center my-3 gap-6", className)}>
       {list.map((item, index) => (
         <Link to={item.link} key={index}>
           <Button>

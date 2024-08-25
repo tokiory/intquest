@@ -7,6 +7,7 @@ import qa from "@/data/questions/qa";
 import { Icon } from "@iconify-icon/react";
 import { useMemo } from "react";
 import sections from "@/data/sections.ts";
+import { PageWrapper } from "@/components/PageWrapper";
 
 export const HomePage = () => {
   const totalQuestionAmount = useMemo(() => {
@@ -17,8 +18,8 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col flex-grow items-center justify-center h-full">
-      <div className="text-center text-7xl font-bold mt-auto">
+    <PageWrapper className="justify-center items-center pb-0">
+      <div className="text-center text-wrap text-4xl sm:text-6xl md:text-7xl font-bold mt-auto">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
           Int
         </span>
@@ -44,7 +45,7 @@ export const HomePage = () => {
         Как пользоваться Intquest?
       </Link>
 
-      <div className="mt-auto max-w-3xl text-center">
+      <div className="mt-auto pt-4 max-w-3xl text-center">
         Intquest предоставляет собеседующему огромный выбор вопросов для
         интервью.
         <br />
@@ -62,6 +63,6 @@ export const HomePage = () => {
         </a>
         <Icon style={{ fontSize: "32px" }} icon="fluent-emoji:whale" />
       </Text>
-    </div>
+    </PageWrapper>
   );
 };
