@@ -6,30 +6,33 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:unicorn/recommended",
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parser: '@typescript-eslint/parser',
-  plugins: [
-    'react-refresh',
-    'unicorn'
+  ignorePatterns: [
+    "dist",
+    ".eslintrc.cjs",
+    "src/vite-env.d.ts",
+    "vite.config.ts",
   ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["react-refresh", "unicorn"],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
+    "react-refresh/only-export-components": [
+      "warn",
       { allowConstantExport: true },
     ],
     "unicorn/filename-case": [
       "error",
       {
-        "cases": {
-          "camelCase": true,
-          "pascalCase": true
-        }
-      }
-    ]
+        cases: {
+          kebabCase: true,
+          camelCase: true,
+          pascalCase: true,
+        },
+      },
+    ],
   },
-}
+};

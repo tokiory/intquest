@@ -43,9 +43,9 @@ CardTitle.displayName = "CardTitle"
 const CardDescription = forwardRef<
   HTMLParagraphElement,
   HTMLAttributes<HTMLParagraphElement>
->(({ className, ...properties }, ref) => (
+>(({ className, ...properties }, reference) => (
   <p
-    ref={ref}
+    ref={reference}
     className={cn("text-sm text-muted-foreground", className)}
     {...properties}
   />
@@ -55,17 +55,17 @@ CardDescription.displayName = "CardDescription"
 const CardContent = forwardRef<
   HTMLDivElement,
   HTMLAttributes<HTMLDivElement>
->(({ className, ...properties }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...properties} />
+>(({ className, ...properties }, reference) => (
+  <div ref={reference} className={cn("p-6 pt-0", className)} {...properties} />
 ))
 CardContent.displayName = "CardContent"
 
 const CardFooter = forwardRef<
   HTMLDivElement,
   HTMLAttributes<HTMLDivElement>
->(({ className, ...properties }, ref) => (
+>(({ className, ...properties }, reference) => (
   <div
-    ref={ref}
+    ref={reference}
     className={cn("flex items-center p-6 pt-0", className)}
     {...properties}
   />
